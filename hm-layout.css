@@ -1,0 +1,777 @@
+/* NVIDIA Color Palette */
+:root {
+    --nvidia-dark: #0d0d0d;
+    --nvidia-green: #76b900;
+    --nvidia-light: #f5f5f5;
+    --nvidia-text: #333333;
+    --nvidia-white: #ffffff;
+    --nvidia-dark-gray: #333333;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: var(--nvidia-text);
+    background-color: var(--nvidia-light);
+    margin: 0;
+    padding: 0;
+}
+
+.btn-primary {
+    background-color: var(--nvidia-green);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #5e9400;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--nvidia-green);
+    border: 1px solid var(--nvidia-green);
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(118, 185, 0, 0.1);
+}
+
+a {
+    color: var(--nvidia-green);
+    text-decoration: none;
+}
+
+/* Header Styles */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(6, 6, 6); /* or your desired background */
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* optional shadow */
+}
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.left-nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-right: 30px;
+    color: var(--nvidia-white);
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav li {
+    margin: 0 12px;
+    position: relative;
+}
+
+.main-nav a {
+    color: var(--nvidia-white);
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 5px 0;
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: var(--nvidia-green);
+}
+
+.right-nav {
+    display: flex;
+    align-items: center;
+}
+
+.all-microsoft a {
+    color: var(--nvidia-white);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.all-microsoft i {
+    font-size: 0.7rem;
+    margin-left: 5px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    color: var(--nvidia-white);
+    width: 180px;
+    padding: 5px;
+}
+
+.search-box input::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    color: var(--nvidia-white);
+    cursor: pointer;
+    padding: 5px;
+}
+
+
+.hero-carousel {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    background-color: var(--nvidia-dark); /* Fallback background */
+    margin-bottom: 30px;
+}
+
+.hero-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+
+.hero-slide:nth-child(1) {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/hero1.jpg');
+}
+
+.hero-slide:nth-child(2) {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/hero2.jpg');
+}
+
+.hero-slide:nth-child(3) {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/hero3.jpg');
+}
+
+.hero-content {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.carousel-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 2;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+    background-color: var(--nvidia-green);
+    transform: scale(1.2);
+}
+
+
+@media (max-width: 768px) {
+    .hero-carousel {
+        height: 400px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+        width: 80%;
+        max-width: 250px;
+    }
+}
+
+
+.quick-links {
+    background-color: var(--nvidia-white);
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.links-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.links-container a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--nvidia-text);
+    text-decoration: none;
+}
+
+.links-container i {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: var(--nvidia-green);
+}
+
+
+.m365-plans {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.m365-plans h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.plan-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.plan-card {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    width: 300px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+}
+
+.plan-card.featured {
+    border: 2px solid var(--nvidia-green);
+}
+
+.featured-badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: var(--nvidia-green);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.plan-features {
+    margin: 20px 0;
+}
+
+.plan-features p {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+}
+
+.plan-features i {
+    color: var(--nvidia-green);
+    margin-right: 10px;
+}
+
+.plan-pricing {
+    text-align: center;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.price span {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.plan-link {
+    display: block;
+    margin-top: 15px;
+    color: var(--nvidia-green);
+    font-weight: 600;
+}
+
+
+.apps-showcase {
+    padding: 60px 20px;
+    background-color: var(--nvidia-light);
+    text-align: center;
+}
+
+.apps-showcase h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.app-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.app-card:hover {
+    transform: translateY(-5px);
+}
+
+.app-card img {
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+
+.copilot-integration {
+    display: flex;
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 50px;
+    align-items: center;
+}
+
+.copilot-content {
+    flex: 1;
+}
+
+.copilot-image {
+    flex: 1;
+}
+
+.copilot-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.copilot-features {
+    display: flex;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.feature {
+    text-align: center;
+}
+
+.feature i {
+    font-size: 2rem;
+    color: var(--nvidia-green);
+    margin-bottom: 10px;
+}
+.product-grid {
+  padding: 4rem 2rem;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.product-grid h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #000;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.grid-item:hover {
+  transform: translateY(-5px);
+}
+
+.grid-item img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.grid-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.grid-item p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.grid-item a {
+  color: #0067b8;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.grid-item a i {
+  margin-left: 5px;
+}
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.edge-promo {
+    background-color: var(--nvidia-dark);
+    color: var(--nvidia-white);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.edge-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.edge-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.edge-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+
+.business-products {
+    padding: 60px 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+    color: var(--nvidia-dark);
+}
+
+
+.covid-response {
+    background-color: var(--nvidia-light);
+    padding: 40px 20px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* Social Media */
+.social-media {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: var(--nvidia-dark);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--nvidia-green);
+}
+
+
+.site-footer {
+    background-color: var(--nvidia-dark);
+    color: var(--nvidia-white);
+    padding: 40px 20px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.footer-column h3 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: var(--nvidia-light);
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: var(--nvidia-green);
+}
+
+.footer-bottom {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--nvidia-dark-gray);
+}
+
+.locale-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: var(--nvidia-light);
+    font-size: 0.9rem;
+}
+
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .left-nav {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .main-nav ul {
+        display: none; 
+    }
+
+    .main-nav.mobile-visible ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .right-nav {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .search-box {
+        flex-grow: 1;
+        margin-right: 10px;
+    }
+
+    .plan-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .copilot-integration {
+        flex-direction: column;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+html {
+  scroll-behavior: smooth;
+}
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--nvidia-text);
+}
+
+.business-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.business-card {
+    background: var(--nvidia-white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.business-card:hover {
+    transform: translateY(-5px);
+}
+
+.business-card img {
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.business-card h3 {
+    font-size: 1.2rem;
+    color: var(--nvidia-dark-gray);
+    margin-bottom: 10px;
+}
+
+.business-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+.site-footer {
+    background-color: var(--nvidia-dark);
+    color: var(--nvidia-white);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
