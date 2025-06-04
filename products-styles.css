@@ -1,0 +1,1214 @@
+:root {
+  /* Microsoft Windows Colors */
+  --ms-blue: #0078d4;
+  --ms-dark-blue: #106ebe;
+  --ms-light-blue: #e8f1fb;
+  --ms-very-light-blue: #f8f9fc;
+
+  /* NVIDIA Color Accents */
+  --nvidia-green: #76b900;
+  --nvidia-dark-green: #5e9400;
+  --nvidia-light-green: #a8d440;
+  --nvidia-accent: #00d4aa;
+
+  /* H&M Clean Palette */
+  --clean-white: #ffffff;
+  --clean-gray: #f5f5f5;
+  --clean-dark: #1a1a1a;
+  --clean-text: #fffcfc;
+  --clean-light-text: #666666;
+  --clean-border: #e0e0e0;
+}
+
+/* Windows Page Base */
+.windows-page {
+  background-color: var(--clean-white);
+  font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--clean-text);
+}
+
+/* Windows Header - Clean & Minimal */
+.windows-header {
+  background-color: var(--clean-white);
+  border-bottom: 1px solid var(--clean-border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  background-color: #000501b1;
+}
+
+.windows-header-container {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.windows-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.windows-divider {
+  width: 1px;
+  height: 20px;
+  background-color: var(--clean-border);
+}
+
+.windows-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--clean-dark);
+  letter-spacing: 0.5px;
+}
+
+.windows-nav {
+  display: flex;
+  margin-left: 40px;
+  gap: 32px;
+}
+
+.windows-nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--clean-text);
+  text-decoration: none;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+}
+
+.windows-nav-item:hover {
+  color: var(--nvidia-green);
+}
+
+.windows-nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--nvidia-green), var(--nvidia-accent));
+  transition: width 0.3s ease;
+}
+
+.windows-nav-item:hover::after {
+  width: 100%;
+}
+
+.windows-nav-item i {
+  font-size: 10px;
+  margin-left: 4px;
+  opacity: 0.7;
+}
+
+.windows-right-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-left: auto;
+}
+
+/* Windows Hero Carousel - Clean & Modern */
+.windows-hero {
+  background: linear-gradient(135deg, var(--clean-white) 0%, var(--clean-gray) 100%);
+  min-height: 90vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.windows-hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.windows-hero-slide {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+  padding: 2rem 0;
+}
+
+.windows-hero-content {
+  order: 1;
+  z-index: 10;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.windows-hero-slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.windows-hero-content {
+  max-width: 900px;
+  margin: 0 auto 60px;
+  z-index: 3;
+}
+
+.windows-hero h1 {
+  font-size: clamp(40px, 8vw, 72px);
+  font-weight: 200;
+  color: var(--clean-dark);
+  margin-bottom: 32px;
+  letter-spacing: -1px;
+  line-height: 1.1;
+}
+
+.windows-hero p {
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--clean-light-text);
+  margin-bottom: 48px;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Clean Button Styles with NVIDIA Accents */
+.windows-cta-btn {
+  background: linear-gradient(135deg, var(--nvidia-green), var(--nvidia-dark-green));
+  color: var(--clean-white);
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 16px rgba(118, 185, 0, 0.3);
+  margin-right: 16px;
+}
+
+.windows-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(118, 185, 0, 0.4);
+}
+
+.windows-secondary-btn {
+  background-color: transparent;
+  color: var(--clean-dark);
+  padding: 15px 31px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 2px solid var(--clean-border);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.windows-secondary-btn:hover {
+  border-color: var(--nvidia-green);
+  color: var(--nvidia-green);
+  transform: translateY(-2px);
+}
+/* ===== Info Card - Fixed Positioning ===== */
+.windows-info-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  z-index: 10;
+}
+
+.windows-info-card {
+    background-color: var(--clean-white);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+  max-width: 26rem;
+  text-align: left;
+  border: 1px solid var(--clean-border);
+  backdrop-filter: blur(0.5rem);
+  z-index: 20;
+}
+
+.windows-info-card h3 {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--clean-dark);
+  margin-bottom: 1.25rem;
+  line-height: 1.3;
+}
+
+.windows-info-card p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--clean-light-text);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.windows-learn-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--nvidia-green);
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.windows-learn-more:hover {
+  color: var(--nvidia-dark-green);
+  transform: translateX(0.25rem);
+}
+
+.windows-learn-more i {
+  font-size: 0.875rem;
+  transition: transform 0.3s ease;
+}
+
+.windows-learn-more:hover i {
+  transform: translateX(0.25rem);
+}
+
+/* Hero Image Container */
+.windows-hero-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 4rem auto 0;
+  z-index: 5;
+}
+
+.windows-hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 1.25rem 3.75rem rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .windows-info-card {
+    top: auto; /* Reset for responsive layout */
+    bottom: 2rem; /* Position at bottom on smaller screens */
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .windows-info-card {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin: 2rem auto;
+    width: 100%;
+  }
+}
+.windows-info-card p {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--clean-light-text);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.windows-info-container {
+  order: 2;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  padding: 0 2rem;
+  z-index: 5;
+}
+
+
+.windows-learn-more {
+  color: var(--nvidia-green);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  padding: 8px 0;
+}
+
+.windows-learn-more:hover {
+  color: var(--nvidia-dark-green);
+  transform: translateX(4px);
+}
+
+.windows-learn-more i {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.windows-learn-more:hover i {
+  transform: translateX(4px);
+}
+
+.windows-hero-image-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.windows-hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+/* Carousel Controls - Clean & Minimal */
+.windows-carousel-controls {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 16px;
+  z-index: 5;
+}
+
+.windows-carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.windows-carousel-dot.active {
+  background-color: var(--nvidia-green);
+  transform: scale(1.3);
+  box-shadow: 0 0 0 4px rgba(118, 185, 0, 0.2);
+}
+
+.windows-carousel-dot:hover {
+  background-color: var(--nvidia-light-green);
+  transform: scale(1.1);
+}
+
+/* Carousel Navigation Arrows */
+.windows-carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--clean-white);
+  border: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: var(--clean-dark);
+  transition: all 0.3s ease;
+  z-index: 5;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.windows-carousel-nav:hover {
+  background-color: var(--nvidia-green);
+  color: var(--clean-white);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 8px 32px rgba(118, 185, 0, 0.3);
+}
+
+.windows-carousel-prev {
+  left: 40px;
+}
+
+.windows-carousel-next {
+  right: 40px;
+}
+
+/* Slide-specific backgrounds - Clean Gradients */
+.windows-hero-slide:nth-child(1) {
+  background: linear-gradient(135deg, #f8fffe 0%, #f0f9ff 100%);
+}
+
+.windows-hero-slide:nth-child(2) {
+  background: linear-gradient(135deg, #fefdf8 0%, #fff7ed 100%);
+}
+
+.windows-hero-slide:nth-child(3) {
+  background: linear-gradient(135deg, #f7fef8 0%, #f0fdf4 100%);
+}
+
+/* Windows Features Section - Clean Grid */
+.windows-features {
+  padding: 120px 0;
+  background-color: var(--clean-white);
+}
+
+.windows-features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.windows-features-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.windows-features-header h2 {
+  font-size: clamp(32px, 6vw, 48px);
+  font-weight: 300;
+  color: var(--clean-dark);
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+
+.windows-features-header p {
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--clean-light-text);
+  letter-spacing: 0.3px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.windows-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 48px;
+}
+
+.windows-feature-card {
+  text-align: center;
+  padding: 48px 24px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  background-color: var(--clean-gray);
+}
+
+.windows-feature-card:hover {
+  transform: translateY(-8px);
+  background-color: var(--clean-white);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+}
+
+.windows-feature-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--nvidia-green), var(--nvidia-accent));
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 32px;
+  font-size: 32px;
+  color: var(--clean-white);
+  transition: all 0.3s ease;
+}
+
+.windows-feature-card:hover .windows-feature-icon {
+  transform: scale(1.1);
+  box-shadow: 0 8px 24px rgba(118, 185, 0, 0.3);
+}
+
+.windows-feature-card h3 {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--clean-dark);
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.windows-feature-card p {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--clean-light-text);
+  line-height: 1.6;
+}
+
+/* Windows Editions Section - Clean Cards */
+.windows-editions {
+  padding: 120px 0;
+  background-color: var(--clean-gray);
+}
+
+.windows-editions-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.windows-editions-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.windows-editions-header h2 {
+  font-size: clamp(32px, 6vw, 48px);
+  font-weight: 300;
+  color: var(--clean-dark);
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+
+.windows-editions-header p {
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--clean-light-text);
+  letter-spacing: 0.3px;
+}
+
+.windows-editions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.windows-edition-card {
+  background-color: var(--clean-white);
+  padding: 48px 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.windows-edition-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+}
+
+.windows-edition-card.featured {
+  border-color: var(--nvidia-green);
+  background: linear-gradient(135deg, rgba(118, 185, 0, 0.02), rgba(0, 212, 170, 0.02));
+}
+
+.edition-badge {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--nvidia-green), var(--nvidia-accent));
+  color: var(--clean-white);
+  padding: 8px 20px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+.windows-edition-card h3 {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--clean-dark);
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.edition-price {
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--nvidia-green);
+  margin-bottom: 20px;
+}
+
+.windows-edition-card p {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--clean-light-text);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.edition-features {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.edition-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: var(--clean-text);
+}
+
+.edition-features i {
+  color: var(--nvidia-green);
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+/* Windows Requirements Section */
+.windows-requirements {
+  padding: 120px 0;
+  background-color: var(--clean-white);
+}
+
+.windows-requirements-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.windows-requirements-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.windows-requirements-header h2 {
+  font-size: clamp(32px, 6vw, 48px);
+  font-weight: 300;
+  color: var(--clean-dark);
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+
+.windows-requirements-header p {
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--clean-light-text);
+  letter-spacing: 0.3px;
+}
+
+.windows-requirements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-bottom: 80px;
+}
+
+.windows-requirement-card {
+  background-color: var(--clean-gray);
+  padding: 40px 24px;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.windows-requirement-card:hover {
+  background-color: var(--clean-white);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+
+.requirement-icon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, var(--nvidia-green), var(--nvidia-accent));
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  font-size: 24px;
+  color: var(--clean-white);
+}
+
+.windows-requirement-card h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--clean-dark);
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.windows-requirement-card p {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--clean-light-text);
+  line-height: 1.6;
+}
+
+.windows-pc-check {
+  background: linear-gradient(135deg, var(--clean-gray), var(--clean-white));
+  padding: 60px 40px;
+  border-radius: 20px;
+  text-align: center;
+  border: 2px solid var(--clean-border);
+}
+
+.windows-pc-check h3 {
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--clean-dark);
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.windows-pc-check p {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--clean-light-text);
+  margin-bottom: 32px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Responsive Design - Clean Breakpoints */
+@media (max-width: 1024px) {
+  .windows-editions-grid,
+  .windows-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .windows-nav {
+    display: none;
+  }
+
+  .windows-header-container {
+    justify-content: space-between;
+  }
+
+  .windows-info-card {
+    position: static;
+    margin: 0 auto 40px;
+    max-width: 100%;
+  }
+
+  .windows-carousel-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .windows-header-container {
+    padding: 0 20px;
+  }
+
+  .windows-hero {
+    min-height: 80vh;
+  }
+
+  .windows-hero-slide {
+    padding: 60px 20px;
+  }
+
+  .windows-info-card {
+    padding: 32px 24px;
+    margin-bottom: 40px;
+  }
+
+  .windows-editions-grid,
+  .windows-features-grid,
+  .windows-requirements-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .windows-carousel-controls {
+    bottom: 24px;
+  }
+
+  .windows-carousel-dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .windows-features,
+  .windows-editions,
+  .windows-requirements {
+    padding: 80px 0;
+  }
+
+  .windows-features-header,
+  .windows-editions-header,
+  .windows-requirements-header {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .windows-hero {
+    min-height: 70vh;
+  }
+
+  .windows-pc-check {
+    padding: 40px 24px;
+  }
+
+  .windows-cta-btn,
+  .windows-secondary-btn {
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  .windows-feature-card,
+  .windows-edition-card {
+    padding: 32px 20px;
+  }
+}
+
+/* Focus States for Accessibility */
+.windows-nav-item:focus,
+.windows-cta-btn:focus,
+.windows-secondary-btn:focus,
+.windows-learn-more:focus,
+.windows-carousel-dot:focus,
+.windows-carousel-nav:focus {
+  outline: 2px solid var(--nvidia-green);
+  outline-offset: 2px;
+}
+
+/* Smooth Animations */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Loading States */
+.windows-hero-slide:not(.active) {
+  pointer-events: none;
+}
+/* Additional Sections CSS - Clean up inline styles */
+
+/* Phone Sync Section */
+.phone-sync-section {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.phone-sync-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.phone-sync-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.phone-sync-content h2 {
+  font-size: 36px;
+  font-weight: 300;
+  color: var(--clean-dark);
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+
+.phone-sync-content p {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--clean-light-text);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.phone-sync-link {
+  font-size: 16px;
+  color: var(--nvidia-green);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.phone-sync-link:hover {
+  color: var(--nvidia-dark-green);
+  transform: translateX(4px);
+}
+
+/* Explore Features Section */
+.explore-features-section {
+  padding: 80px 0;
+  background-color: #f8f8f8;
+}
+
+.explore-features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.explore-features-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.explore-features-header h2 {
+  font-size: 36px;
+  font-weight: 300;
+  color: var(--clean-dark);
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+
+.explore-features-header p {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--clean-light-text);
+}
+
+.explore-features-cta {
+  margin-top: 24px;
+}
+
+.explore-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.explore-feature-card {
+  background-color: #fff;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.edition-features li {
+  color: #1a1a1a !important;
+}
+
+.edition-features i.fa-check {
+  color: #27ae60 !important; 
+}
+.explore-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.explore-feature-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.explore-feature-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.explore-feature-icon.security {
+  background: linear-gradient(135deg, #0078d4, #106ebe);
+}
+
+.explore-feature-icon.productivity {
+  background: linear-gradient(135deg, #76b900, #5e9400);
+}
+
+.explore-feature-icon.gaming {
+  background: linear-gradient(135deg, #107c41, #0c5e31);
+}
+
+.explore-feature-icon.creativity {
+  background: linear-gradient(135deg, #d83b01, #b7311d);
+}
+
+.explore-feature-icon i {
+  color: white;
+  font-size: 20px;
+}
+
+.explore-feature-card h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--clean-dark);
+}
+
+.explore-feature-card p {
+  font-size: 16px;
+  color: var(--clean-light-text);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* What's New Section */
+.whats-new-section {
+  padding: 80px 20px;
+  background-color: #fff;
+}
+
+.whats-new-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.whats-new-header h2 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--clean-dark);
+}
+
+.whats-new-header p {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 32px;
+  color: var(--clean-light-text);
+  line-height: 1.6;
+}
+
+.whats-new-cta {
+  background-color: #102770;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 48px;
+  transition: all 0.3s ease;
+}
+
+.whats-new-cta:hover {
+  background-color: #0d1f5c;
+  transform: translateY(-2px);
+}
+
+.whats-new-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.whats-new-card {
+  background-color: #f0f5ff;
+  padding: 24px;
+  border-radius: 8px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whats-new-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.whats-new-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--clean-dark);
+}
+
+.whats-new-card p {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: var(--clean-light-text);
+  line-height: 1.5;
+}
+
+.whats-new-card a {
+  color: #003ea8;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.whats-new-card a:hover {
+  color: #002a75;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .phone-sync-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .explore-features-grid,
+  .whats-new-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .phone-sync-section,
+  .explore-features-section,
+  .whats-new-section {
+    padding: 60px 0;
+  }
+  
+  .phone-sync-content h2,
+  .explore-features-header h2 {
+    font-size: 28px;
+  }
+  
+  .whats-new-header h2 {
+    font-size: 32px;
+  }
+  
+  .phone-sync-content p,
+  .explore-features-header p,
+  .whats-new-header p {
+    font-size: 16px;
+  }
+  
+  .explore-feature-card,
+  .whats-new-card {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .whats-new-section {
+    padding: 40px 16px;
+  }
+  
+  .phone-sync-content h2,
+  .explore-features-header h2 {
+    font-size: 24px;
+  }
+  
+  .whats-new-header h2 {
+    font-size: 28px;
+  }
+  
+  .explore-feature-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  
+  .explore-feature-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .explore-feature-icon i {
+    font-size: 18px;
+  }
+}
