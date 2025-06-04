@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft - AI, Cloud, Productivity, Computing, Gaming & Apps</title>
+    <link rel="stylesheet" href="styles.css">
+      <link rel="icon" type="image/png" href="microsoft.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <p>Free shipping on orders over ₱2,000 | Microsoft 365 - Now Available</p>
+    </div>
+
+    <!-- Header Section -->
+    <header class="site-header">
+        <div class="header-container">
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Microsoft Logo -->
+            <div class="logo">
+                <div class="ms-logo">
+                    <div class="ms-logo-grid">
+                        <div class="ms-logo-square red"></div>
+                        <div class="ms-logo-square green"></div>
+                        <div class="ms-logo-square blue"></div>
+                        <div class="ms-logo-square yellow"></div>
+                    </div>
+                    <span>MICROSOFT</span>
+                </div>
+            </div>
+
+            <!-- Main Navigation -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#m365-plans">MICROSOFT 365</a></li>
+                    <li><a href="#apps-showcase">OFFICE</a></li>
+                    <li><a href="#copilot-integration">COPILOT</a></li>
+                    <li><a href="products.html">WINDOWS</a></li>
+                    <li><a href="support.html">SUPPORT</a></li>
+                </ul>
+            </nav>
+
+            <!-- Right Navigation -->
+            <div class="right-nav">
+                <div class="search-container">
+                    <button class="search-toggle" onclick="toggleSearch()">
+                        <i class="fas fa-search"></i>
+                        <span>Search</span>
+                    </button>
+                </div>
+                <button class="sign-in-btn">SIGN IN</button>
+            </div>
+        </div>
+
+        <!-- Search Overlay -->
+        <div class="search-overlay" id="searchOverlay">
+            <div class="search-content">
+                <input type="text" placeholder="Search Microsoft.com" class="search-input">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav" id="mobileNav">
+            <ul>
+                <li><a href="index.html">MICROSOFT 365</a></li>
+                <li><a href="#apps-showcase">OFFICE</a></li>
+                <li><a href="#copilot-content">COPILOT</a></li>
+                <li><a href="products.html">WINDOWS</a></li>
+                <li><a href="support.html">SUPPORT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+       <section class="hero-section">
+  <!-- Photo Carousel Container -->
+  <div class="hero-carousel">
+    <!-- Carousel Slides -->
+    <div class="carousel-slide active" style="background-image: url('Copilot.avif');"></div>
+    <div class="carousel-slide" style="background-image: url('mssupport.png');"></div>
+    <div class="carousel-slide" style="background-image: url('homephoto.avif');"></div>
+    
+    <!-- Overlay for better text visibility -->
+    <div class="carousel-overlay"></div>
+  </div>
+  
+  <!-- Your Existing Content -->
+  <div class="hero-content">
+    <h1>Achieve the extraordinary</h1>
+    <p>Microsoft 365 delivers cloud storage, security, and Microsoft Copilot in your favorite apps – all in one plan.</p>
+    <div class="hero-buttons">
+      <button class="btn-primary" onclick="window.location.href='#m365-plans'">FOR 1 PERSON</button>
+      <button class="btn-secondary" onclick="window.location.href='#m365-plans'">FOR UP TO 6 PEOPLE</button>
+    </div>
+  </div>
+  
+  <!-- Floating Apps -->
+  <div class="hero-visual">
+    <div class="floating-apps">
+      <div class="app-icon word">W</div>
+      <div class="app-icon excel">X</div>
+      <div class="app-icon powerpoint">P</div>
+      <div class="app-icon outlook">O</div>
+    </div>
+  </div>
+  
+  <!-- Carousel Controls -->
+  <div class="carousel-controls">
+    <button class="carousel-prev" aria-label="Previous slide">‹</button>
+    <div class="carousel-dots">
+      <span class="dot active" data-slide="0"></span>
+      <span class="dot" data-slide="1"></span>
+      <span class="dot" data-slide="2"></span>
+    </div>
+    <button class="carousel-next" aria-label="Next slide">›</button>
+  </div>
+</section>
+
+           <!-- Microsoft Apps Showcase -->
+        <section id="apps-showcase" class="apps-showcase">
+            <div class="section-header">
+            </div>
+            <div class="apps-grid">
+                <div class="app-card">
+                    <div class="app-image">
+                        <img src="ms11.jpg" alt="Windows 11" class="product-img">
+                    </div>
+                    <h3>Designed for life today-and tommorow</h3>
+                    <p>The next-generation of games. Your goals. Friends and family. Windows 11 was made to bring you closes to everything you love</p>
+                    <button class="app-btn">See if your PC is ready</button>
+                </div>
+                <div class="app-card">
+                    <div class="app-image">
+                        <img src="onedriveinuse.avif" alt="Microsoft OneDrive" class="product-img">
+                    </div>
+                    <h3>Microsoft OneDrive</h3>
+                    <p>Save your files and photos to Onedrive and access them from any device, anywhere.</p>
+                    <button class="app-btn">Learn more</button>
+                </div>
+                <div class="app-card">
+                    <div class="app-image">
+                        <img src="onenoteinuse.webp" alt="OneNote" class="product-img">
+                    </div>
+                    <h3>OneNote</h3>
+                    <p>Organize your notes and your life.</p>
+                    <button class="app-btn">LEARN MORE</button>
+                </div>
+                <div class="app-card">
+                    <div class="app-image">
+                        <img src="edge.png" alt="Microsoft Outlook" class="product-img">
+                    </div>
+                    <h3>Microsoft Edge</h3>
+                    <p>World-class performance with more privacy, more productivity, and more value while you browse.</p>
+                    <button class="app-btn">Download Now</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Copilot Integration Section -->
+        <section id="copilot-integration" class="copilot-integration">
+            <div id="copilot-content">
+                <h2>INTRODUCING MICROSOFT COPILOT</h2>
+                <p>Your AI companion for work and life. Copilot works across Microsoft 365 apps to boost your creativity, productivity, and skills.</p>
+                <div class="copilot-features">
+                    <div class="feature">
+                        <i class="fas fa-magic"></i>
+                        <p>CONTENT CREATION</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-chart-line"></i>
+                        <p>DATA ANALYSIS</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-comments"></i>
+                        <p>MEETING SUMMARIES</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-code"></i>
+                        <p>CODE GENERATION</p>
+                    </div>
+                </div>
+                <button class="btn-primary">TRY COPILOT NOW</button>
+            </div>
+            <div class="copilot-visual">
+                <div class="ai-demo">
+                    <div class="ai-animation">
+                        <div class="ai-circle"></div>
+                        <div class="ai-pulse"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Grid - FOR PRODUCTIVITY with your images -->
+        <section id="product-grid" class="product-grid">
+            <div class="section-header">
+                <h2>FOR PRODUCTIVITY</h2>
+            </div>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <div class="item-image">
+                        <img src="copilot.webp" alt="Microsoft 365 Copilot" class="product-img">
+                        <div class="wishlist-btn">♡</div>
+                    </div>
+                    <h3>MICROSOFT 365 COPILOT</h3>
+                    <p>Save Time and focus on the things that matter most with AI in Microsoft 365 for business.</p>
+                    <button class="item-btn">LEARN MORE <i class="fas fa-chevron-right"></i></button>
+                </div>
+
+                <div class="grid-item">
+                    <div class="item-image">
+                        <img src="vstudio.jpg" alt="Visual Studio 2022" class="product-img">
+                        <div class="wishlist-btn">♡</div>
+                    </div>
+                    <h3>VISUAL STUDIO 2022</h3>
+                    <p>Get the most comprehensive IDE for .NET and C++ developers on Windows for building web, cloud, desktop, mobile apps, services, and games.</p>
+                    <button class="item-btn">DOWNLOAD VISUAL STUDIO 2022 <i class="fas fa-chevron-right"></i></button>
+                </div>
+
+                <div class="grid-item">
+                    <div class="item-image">
+                        <img src="surface5.jpg" alt="Windows 365 Cloud PC" class="product-img">
+                        <div class="wishlist-btn">♡</div>
+                    </div>
+                    <h3>WINDOWS 365 CLOUD PC</h3>
+                    <p>Securely stream your Windows experience from the Microsoft cloud to any device.</p>
+                    <button class="item-btn">GET IT TODAY <i class="fas fa-chevron-right"></i></button>
+                </div>
+
+                <div class="grid-item">
+                    <div class="item-image">
+                        <img src="msviva.png" alt="Microsoft Viva" class="product-img">
+                        <div class="wishlist-btn">♡</div>
+                    </div>
+                    <h3>MICROSOFT VIVA</h3>
+                    <p>Bring together connection, purpose, insight, and growth with the first employee experience platform built for the hybrid era.</p>
+                    <button class="item-btn">LEARN MORE ABOUT MICROSOFT VIVA <i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Windows Apps Section -->
+        <section id="windows-apps" class="windows-apps">
+            <div class="section-header">
+                <h2>GET TO KNOW WINDOWS APPS</h2>
+            </div>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <div class="item-image">
+                        <img src="edge.png" alt="Microsoft Edge" class="product-img">
+                        <div class="wishlist-btn">♡</div>
+                    </div>
+                    <h3>MICROSOFT EDGE</h3>
+                    <p>World-class performance with more privacy, more productivity, and more value while you browse.</p>
+                    <button class="item-btn">DOWNLOAD NOW <i class="fas fa-chevron-right"></i></button>
+                </div>
+
+                <div class="grid-item">
+                    <div class="item-image">
+                        <img src="onedrive.jpg" alt="Microsoft OneDrive" class="product-img">
+                        <div class="wishlist-btn">♡</div>
+                    </div>
+                    <h3>MICROSOFT ONEDRIVE</h3>
+                    <p>Save your files and photos to OneDrive and access them from any device, anywhere.</p>
+                    <button class="item-btn">LEARN MORE <i class="fas fa-chevron-right"></i></button>
+                </div>
+
+                <div class="grid-item">
+                    <div class="item-image">
+                        <img src="outlook.jpg" alt="Outlook Mobile" class="product-img">
+                        <div class="wishlist-btn">♡</div>
+                    </div>
+                    <h3>OUTLOOK FOR IOS AND ANDROID</h3>
+                    <p>Connect. Organize. Get things done.</p>
+                    <button class="item-btn">DOWNLOAD NOW <i class="fas fa-chevron-right"></i></button>
+                </div>
+
+                <div class="grid-item">
+                    <div class="item-image">
+                        <img src="msteams.png" alt="Microsoft Teams" class="product-img">
+                        <div class="wishlist-btn">♡</div>
+                    </div>
+                    <h3>MICROSOFT TEAMS</h3>
+                    <p>Meet, chat, call, and collaborate in just one place.</p>
+                    <button class="item-btn">GET TEAMS <i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Microsoft 365 Plans Section -->
+        <section id="m365-plans" class="m365-plans">
+            <div class="section-header">
+                <h2>MICROSOFT 365 PLANS</h2>
+            </div>
+            <div class="plan-cards">
+                <div class="plan-card">
+                    <h3>MICROSOFT 365 PERSONAL</h3>
+                    <div class="plan-features">
+                        <p><i class="fas fa-check"></i> Premium Office apps (Word, Excel, PowerPoint, Outlook)</p>
+                        <p><i class="fas fa-check"></i> 1 TB OneDrive cloud storage</p>
+                        <p><i class="fas fa-check"></i> Advanced security features</p>
+                        <p><i class="fas fa-check"></i> Ad-free Outlook experience</p>
+                        <p><i class="fas fa-check"></i> Technical support</p>
+                    </div>
+                    <div class="plan-pricing">
+                        <p class="price">$69.99<span>/year</span></p>
+                        <button class="btn-primary">CHOOSE PLAN</button>
+                        <a href="#" class="plan-link">See all options <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="plan-card featured">
+                    <div class="featured-badge">BEST VALUE</div>
+                    <h3>MICROSOFT 365 FAMILY</h3>
+                    <div class="plan-features">
+                        <p><i class="fas fa-check"></i> Everything in Personal</p>
+                        <p><i class="fas fa-check"></i> For up to 6 people</p>
+                        <p><i class="fas fa-check"></i> Up to 6 TB total cloud storage (1 TB per person)</p>
+                        <p><i class="fas fa-check"></i> Microsoft Family Safety features</p>
+                        <p><i class="fas fa-check"></i> Shareable subscription benefits</p>
+                    </div>
+                    <div class="plan-pricing">
+                        <p class="price">$99.99<span>/year</span></p>
+                        <button class="btn-primary">CHOOSE PLAN</button>
+                        <a href="#" class="plan-link">See all options <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="plan-card">
+                    <h3>MICROSOFT 365 BUSINESS BASIC</h3>
+                    <div class="plan-features">
+                        <p><i class="fas fa-check"></i> Web and mobile versions of Office apps</p>
+                        <p><i class="fas fa-check"></i> 1 TB OneDrive cloud storage</p>
+                        <p><i class="fas fa-check"></i> Microsoft Teams</p>
+                        <p><i class="fas fa-check"></i> Standard security features</p>
+                        <p><i class="fas fa-check"></i> Business-class email</p>
+                    </div>
+                    <div class="plan-pricing">
+                        <p class="price">$6.00<span>/user/month</span></p>
+                        <button class="btn-primary">CHOOSE PLAN</button>
+                        <a href="#" class="plan-link">See all options <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="newsletter-content">
+                <h2>STAY CONNECTED</h2>
+                <p>Follow Microsoft and get the latest news, updates, and exclusive offers.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" class="email-input">
+                    <button class="subscribe-btn">SUBSCRIBE</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>WHAT'S NEW</h3>
+                    <ul>
+                        <li><a href="#">Surface Laptop Studio 2</a></li>
+                        <li><a href="#">Surface Laptop Go 3</a></li>
+                        <li><a href="#">Surface Pro 9</a></li>
+                        <li><a href="#">Windows 11 apps</a></li>
+                        <li><a href="#">Copilot in Windows 11</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>MICROSOFT STORE</h3>
+                    <ul>
+                        <li><a href="#">Account profile</a></li>
+                        <li><a href="#">Download Center</a></li>
+                        <li><a href="#">Microsoft Store Support</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Order tracking</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>EDUCATION</h3>
+                    <ul>
+                        <li><a href="#">Microsoft in education</a></li>
+                        <li><a href="#">Devices for education</a></li>
+                        <li><a href="#">Microsoft Teams for Education</a></li>
+                        <li><a href="#">Microsoft 365 Education</a></li>
+                        <li><a href="#">How to buy for your school</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>BUSINESS</h3>
+                    <ul>
+                        <li><a href="#">Microsoft Cloud</a></li>
+                        <li><a href="#">Microsoft Security</a></li>
+                        <li><a href="#">Azure</a></li>
+                        <li><a href="#">Dynamics 365</a></li>
+                        <li><a href="#">Microsoft 365</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>DEVELOPER & IT</h3>
+                    <ul>
+                        <li><a href="#">Developer Center</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Microsoft Learn</a></li>
+                        <li><a href="#">Microsoft Tech Community</a></li>
+                        <li><a href="#">Azure Marketplace</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>COMPANY</h3>
+                    <ul>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">About Microsoft</a></li>
+                        <li><a href="#">Company news</a></li>
+                        <li><a href="#">Privacy at Microsoft</a></li>
+                        <li><a href="#">Investors</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="locale-selector">
+                    <i class="fas fa-globe"></i>
+                    <span>English (Philippines)</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Contact Microsoft</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms of use</a>
+                    <a href="#">Trademarks</a>
+                    <a href="#">About our ads</a>
+                    <a href="#">© Microsoft 2024</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
