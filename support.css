@@ -256,7 +256,8 @@ body {
 
 /* Support Hero Section with Gradient */
 .support-hero {
-  background: linear-gradient(135deg, var(--ms-purple) 0%, var(--ms-teal) 100%);
+  background: linear-gradient(135deg, #5e9400 0%, #a8d440 50%, #00d4aa 100%);
+
   padding: 80px 20px;
   text-align: center;
   color: white;
